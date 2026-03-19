@@ -21,12 +21,12 @@ interface FleetStore {
 }
 
 const INDIAN_NAMES = [
-  "Arjun Mehta", "Sana Khan", "Vikram Singh", "Pooja Patel", "Rahul Sharma",
-  "Anita Desai", "Karan Johar", "Priya Raj", "Amit Kumar", "Neha Gupta",
-  "Ravi Teja", "Sneha Reddy", "Aditya Joshi", "Kavita Iyer", "Sanjay Dutt",
-  "Meera Rajput", "Rohan Das", "Nisha Jain", "Tarun Gill", "Simran Kaur",
-  "Varun Dhawan", "Riya Sen", "Kartik Aaryan", "Ananya Panday", "Ishaan Khatter",
-  "Kriti Sanon", "Ayushmann K", "Taapsee Pannu", "Rajkummar R", "Bhumi Pednekar"
+  "Ravi Kumar", "Sunita Sharma", "Amit Patel", "Priya Singh", "Rajesh Gupta",
+  "Anita Verma", "Suresh Rao", "Meena Reddy", "Ramesh Iyer", "Kavita Desai",
+  "Mahesh Joshi", "Neha Jain", "Dinesh Saxena", "Pooja Agarwal", "Sunil Das",
+  "Anjali Rathi", "Anil Tiwari", "Ritu Chawla", "Prakash Menon", "Nidhi Nambiar",
+  "Vinod Khanna", "Rakesh Pande", "Deepak Pillai", "Sneha Nair", "Sanjay Dubey",
+  "Ananya Chatterjee", "Kiran Kumar", "Manju Nath", "Vikas Bansal", "Sandeep Yadav"
 ];
 
 const generateInitialFleet = (count: number): Vehicle[] => {
@@ -39,8 +39,9 @@ const generateInitialFleet = (count: number): Vehicle[] => {
       driverName,
       speedKmh: isStopped ? 0 : Math.floor(Math.random() * 110),
       location: { 
-        lat: 32.2 + (Math.random() * 0.1 - 0.05), 
-        lng: 77.1 + (Math.random() * 0.1 - 0.05) 
+        // Bilaspur, Chhattisgarh offset distribution
+        lat: 22.0797 + (Math.random() * 0.1 - 0.05), 
+        lng: 82.1409 + (Math.random() * 0.1 - 0.05) 
       },
       smoothRideScore: Math.floor(Math.random() * 40) + 60, // 60-100
       status: isStopped ? "stopped" : "online",
