@@ -1,0 +1,28 @@
+▲ Next.js 16.2.0 (Turbopack)
+
+  Creating an optimized production build ...
+
+> Build error occurred
+Error: Turbopack build failed with 1 errors:
+./src/components/radar/LiveMap.tsx:6:1
+Module not found: Can't resolve 'react-map-gl'
+  4 | import { useEffect, useState } from "react";
+  5 | // @ts-ignore
+> 6 | import Map, { Marker, NavigationControl } from "react-map-gl";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import 'mapbox-gl/dist/mapbox-gl.css';
+  8 | import { CarFront, AlertOctagon } from "lucide-react";
+  9 |
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/radar/LiveMap.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (./src/components/radar/LiveMap.tsx:6:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
